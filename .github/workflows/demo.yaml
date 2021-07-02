@@ -19,5 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt-get install apache2
-      - run: httpd -v
+      - run: sudo ufw show app list
+      - run: sudo ufw allow 'Apache'
+      - run: sudo ufw status
+      - run: sudo systemctl status apache2.service
 
