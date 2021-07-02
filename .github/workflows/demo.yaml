@@ -1,5 +1,11 @@
-name: learn-github-actions-part-1
-on: [push]
+name: introduction-of-github-actions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
